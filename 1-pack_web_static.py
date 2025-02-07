@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-from fabric.api import local
+
 from datetime import datetime
+from fabric.api import local
 
 
 def do_pack():
     """
     Generates a .tgz archive from the contents of the web_static folder.
-
     The archive is stored in the versions directory and is named based on
     the current timestamp.
 
