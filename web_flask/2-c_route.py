@@ -17,4 +17,6 @@ def hbnb():
 def c_text(text):
     """Returns 'C' followed by the given text, with underscores replaced by spaces."""
     return "C " + text.replace("_", " ")  # Dynamic route magic!
-
+f __name__ == "__main__":
+    # Running the app on all available IPs (0.0.0.0) and port 5000
+    app.run(host='0.0.0.0', port=5000)
