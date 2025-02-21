@@ -7,3 +7,14 @@ app = Flask(__name__)
 def hello_hbnb():
     """Returns a simple greeting message."""
     return "Hello HBNB!"
+
+@app.route('/hbnb', strict_slashes=False)
+def hbnb():
+    """Returns 'HBNB' when visiting /hbnb."""
+    return "HBNB"  # Another route, another win!
+
+@app.route('/c/<text>', strict_slashes=False)
+def c_text(text):
+    """Returns 'C' followed by the given text, with underscores replaced by spaces."""
+    return "C " + text.replace("_", " ")  # Dynamic route magic!
+
