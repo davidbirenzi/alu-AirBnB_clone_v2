@@ -17,4 +17,8 @@ def hbnb():
     """Returns 'HBNB' when visiting /hbnb."""
     return "HBNB"
 
+@app.route('/c/<text>', strict_slashes=False)
+def c_text(text):
+    """Returns 'C' followed by the given text, with underscores replaced by spaces."""
+    return "C " + text.replace("_", " ")  # Dynamic route
 
