@@ -20,4 +20,17 @@ def hbnb():
     """Returns 'HBNB' when visiting /hbnb."""
     return "HBNB"  # Another route
 
+@app.route('/c/<text>', strict_slashes=False)
+def c_text(text):
+    """Returns 'C' followed by the given text, with underscores replaced by spaces."""
+    return "C " + text.replace("_", " ")  # Dynamic route
+
+@app.route('/python/', defaults={'text': 'is cool'}, strict_slashes=False)
+@app.route('/python/<text>', strict_slashes=False)
+def python_text(text):
+    """Returns 'Python' followed by the given text, with underscores replaced by spaces.
+    If no text is provided, defaults to 'is cool'.
+    """
+    return "Python " + text.replace("_", " ")
+
 
