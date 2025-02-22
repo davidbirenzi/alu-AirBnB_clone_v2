@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 """Module for flask app with routes"""
-
-
 from flask import Flask, render_template
-"""Importing the Flask class from the flask module"""
+from urllib.parse import unquote
 
 app = Flask(__name__)
 
@@ -43,5 +41,4 @@ def number_odd_or_even(n):
     return render_template('6-number_odd_or_even.html', n=n, parity=parity)
 
 if __name__ == "__main__":
-    """Running the app on all available IPs (0.0.0.0) and port 5000"""
     app.run(host="0.0.0.0", port=5000)

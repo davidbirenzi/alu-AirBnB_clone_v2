@@ -1,13 +1,7 @@
 #!/usr/bin/python3
-"""
-Flask web application that handles different routes with dynamic parameters.
-"""
-
-
+""" Flask web application that handles different routes with dynamic parameters. """
 from flask import Flask
-"""
-A simple Flask web application.
-"""
+from urllib.parse import unquote
 
 app = Flask(__name__)
 
@@ -35,5 +29,4 @@ def python_text(text):
     return "Python " + text.replace("_", " ")
 
 if __name__ == "__main__":
-    # Running the app on all available IPs (0.0.0.0) and port 5000
     app.run(host='0.0.0.0', port=5000)
