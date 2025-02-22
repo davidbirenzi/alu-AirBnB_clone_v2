@@ -3,11 +3,11 @@
 Flask web application that handles different routes with dynamic parameters
 """
 
-
 from flask import Flask
 """
 A simple Flask web application.
 """
+
 app = Flask(__name__)
 @app.route('/', strict_slashes=False)
 def hello_hbnb():

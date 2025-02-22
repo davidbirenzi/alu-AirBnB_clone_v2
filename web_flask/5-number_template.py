@@ -4,10 +4,11 @@ Flask web application that handles different routes with dynamic parameters.
 Yeah, we're making the web talk!
 """
 
-
 from flask import Flask, render_template
+"""
+A simple Flask web application. It's like a web server, but simpler.
+"""
 
-# Creating the Flask app instance
 app = Flask(__name__)
 
 @app.route('/', strict_slashes=False)
@@ -44,5 +45,5 @@ def number_template(n):
     return render_template('5-number.html', n=n)
 
 if __name__ == "__main__":
-    # Running the app on all available IPs (0.0.0.0) and port 5000
+    """Running the app on all available IPs (0.0.0.0) and port 5000"""
     app.run(host='0.0.0.0', port=5000)
