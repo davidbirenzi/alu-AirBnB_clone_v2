@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module for flask app with routes"""
 
+
 from flask import Flask, render_template
 
 app = Flask(__name__)

@@ -1,3 +1,9 @@
+#!/usr/bin/python3
+"""
+Flask web application that handles different routes with dynamic parameters.
+"""
+
+
 from flask import Flask
 """
 A simple Flask web application.

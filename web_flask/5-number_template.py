@@ -4,6 +4,7 @@ Flask web application that handles different routes with dynamic parameters.
 Yeah, we're making the web talk!
 """
 
+
 from flask import Flask, render_template
 
 # Creating the Flask app instance
