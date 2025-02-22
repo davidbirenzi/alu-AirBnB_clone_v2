@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Flask web application that handles different routes with dynamic parameters. """
+""" Flask web application that handles different routes"""
 from flask import Flask
 from urllib.parse import unquote
 
@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/', strict_slashes=False)
 def hello_hbnb():
     """Returns a simple greeting message."""
-    return "Hello HBNB!" 
+    return "Hello HBNB!"
 
 @app.route('/hbnb', strict_slashes=False)
 def hbnb():
@@ -17,15 +17,13 @@ def hbnb():
 
 @app.route('/c/<text>', strict_slashes=False)
 def c_text(text):
-    """Returns 'C' followed by the given text, with underscores replaced by spaces."""
-    return "C " + text.replace("_", " ") 
+    """Returns 'C' followed by the given text."""
+    return "C " + text.replace("_", " ")
 
 @app.route('/python/', defaults={'text': 'is cool'}, strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def python_text(text):
-    """Returns 'Python' followed by the given text, with underscores replaced by spaces.
-    If no text is provided, defaults to 'is cool'.
-    """
+
     return "Python " + text.replace("_", " ")
 
 if __name__ == "__main__":
