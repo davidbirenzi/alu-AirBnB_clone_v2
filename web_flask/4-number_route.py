@@ -5,10 +5,10 @@ Flask web application that handles different routes with dynamic parameters
 
 
 from flask import Flask
-
-# Creating the Flask app instance
+"""
+A simple Flask web application.
+"""
 app = Flask(__name__)
-
 @app.route('/', strict_slashes=False)
 def hello_hbnb():
     """Returns a simple greeting message."""
@@ -38,5 +38,5 @@ def number_route(n):
     return f"{n} is a number"
 
 if __name__ == "__main__":
-    # Running the app on all available IPs (0.0.0.0) and port 5000
+    """Running the app on all available IPs (0.0.0.0) and port 5000"""
     app.run(host='0.0.0.0', port=5000)
