@@ -1,6 +1,8 @@
 from flask import Flask
+"""
+A simple Flask web application.
+"""
 
-# Creating the Flask app instance
 app = Flask(__name__)
 
 @app.route('/', strict_slashes=False)

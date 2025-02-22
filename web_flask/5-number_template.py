@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 Flask web application that handles different routes with dynamic parameters.
 Yeah, we're making the web talk!

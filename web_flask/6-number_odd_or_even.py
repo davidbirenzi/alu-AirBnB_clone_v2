@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-# This script starts a Flask web application with multiple routes.
-# It listens on 0.0.0.0, port 5000, and defines routes for '/', '/hbnb',
-# '/c/<text>', '/python/(<text>)', '/number/<n>', '/number_template/<n>',
-# and '/number_odd_or_even/<n>'.
+"""Module for flask app with routes"""
 
 from flask import Flask, render_template
 

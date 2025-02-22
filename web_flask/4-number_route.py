@@ -2,6 +2,7 @@
 """
 Flask web application that handles different routes with dynamic parameters
 """
+
 from flask import Flask
 
 # Creating the Flask app instance
