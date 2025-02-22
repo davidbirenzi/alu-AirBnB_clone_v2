@@ -14,12 +14,12 @@ def hello_hbnb():
 def hbnb():
 
     """Returns 'HBNB' when visiting /hbnb."""
-    return "HBNB"  
+    return "HBNB"
 
 @app.route('/c/<text>', strict_slashes=False)
 def c_text(text):
 
-    """Returns 'C' followed by the given text, with underscores replaced by spaces."""
+    """Returns 'C' followed by the given text"""
     return "C " + text.replace("_", " ")
 
 if __name__ == "__main__":
