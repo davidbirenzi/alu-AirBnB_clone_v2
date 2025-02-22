@@ -1,37 +1,37 @@
 #!/usr/bin/python3
-""" Flask web application that handles different routes"""
+"""Starts the web app"""
 from flask import Flask
 from urllib.parse import unquote
 
 app = Flask(__name__)
 
+
 @app.route('/', strict_slashes=False)
 def hello_hbnb():
+    """Displays the Hello HBNB"""
+    return 'Hello HBNB!'
 
-
-    """Returns a simple greeting message."""
-    return "Hello HBNB!"
 
 @app.route('/hbnb', strict_slashes=False)
-def hbnb():
+def display_hbnb():
+    """Returns the HBNB"""
+    return 'HBNB'
 
-
-    """Returns 'HBNB' when visiting /hbnb."""
-    return "HBNB"
 
 @app.route('/c/<text>', strict_slashes=False)
-def c_text(text):
+def display_c(text):
+    """Replace underscores with spaces"""
+    text = unquote(text).replace('_', ' ')
+    return 'C {}'.format(text)
 
-
-    """Returns 'C' followed by the given text."""
-    return "C " + text.replace("_", " ")
 
 @app.route('/python/', defaults={'text': 'is cool'}, strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
-def python_text(text):
+def display_python(text):
+    """Replace underscores with spaces"""
+    text = unquote(text).replace('_', ' ')
+    return 'Python {}'.format(text)
 
 
-    return "Python " + text.replace("_", " ")
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
